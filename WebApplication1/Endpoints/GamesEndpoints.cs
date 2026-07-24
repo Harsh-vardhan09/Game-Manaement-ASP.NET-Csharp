@@ -31,7 +31,7 @@ public static class GamesEndpoints
         {
             if (string.IsNullOrEmpty(newGame.Name))
             {
-                return Results.BadRequest("Name is required")
+                return Results.BadRequest("Name is required");
             }
             GameDto game = new(
                 games.Count + 1,
@@ -70,6 +70,9 @@ public static class GamesEndpoints
             games.RemoveAll(game => game.Id == id);
             return Results.NoContent();
         });
+
+        
+
 
         app.MapGet("/", () => "Hello World!");
     }

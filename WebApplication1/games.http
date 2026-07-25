@@ -9,23 +9,25 @@ content-Type:application/json
 
 {
     "name":"super mario",
-    "genre":"platformer",
+    "genre":3,
     "price":59.99,
     "releaseDate":"2023-10-20"
 }
 
 ###
-PUT http://localhost:3000/games/1
+PUT http://localhost:3000/games/5
 content-Type:application/json
 
 {
     "name": "street fighter 2 turbo",
-    "genre": "fighting",
-    "price": 9.99,
+    "genreId": 2,
+    "price": 19.99,
     "releaseDate": "1992-07-15"
 }
 
 ###
 DELETE http://localhost:3000/games/1
 
+### 
+GET http://localhost:3000/genres
 
